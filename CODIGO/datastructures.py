@@ -167,7 +167,7 @@ class PriorityQueue(object):
         # push new element up toward the root as far as possible
         current = self.size
         while not self.is_root(current):
-            parent = self.parent(current)
+            parent = int(self.parent(current))
             if self.cost(current) >= self.cost(parent):
                 return
             self.swap(current, parent)
